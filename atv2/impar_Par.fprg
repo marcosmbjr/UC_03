@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="imparPar"/>
+        <attribute name="authors" value=""/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-08 04:34:59 "/>
+        <attribute name="created" value="bWFyY29zLm1ianVuaW9yMTtTQU4wNjc0Mzg5VzExLTE7MjAyNS0wNS0wODsiMDQ6Mjg6MDkgIjszNjg4"/>
+        <attribute name="edited" value="bWFyY29zLm1ianVuaW9yMTtTQU4wNjc0Mzg5VzExLTE7MjAyNS0wNS0wODsiMDQ6MzQ6NTkgIjsxOzM3OTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, i" type="Integer" array="False" size=""/>
+            <declare name="resultado" type="String" array="False" size=""/>
+            <output expression="&quot;Digite o primeiro n&#250;mero:&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Digite o segundo n&#250;mero:&quot;" newline="True"/>
+            <input variable="num2"/>
+            <while expression="num1 &gt;= num2">
+                <output expression="&quot;O primeiro n&#250;mero deve ser menor que o segundo.&quot;" newline="True"/>
+                <output expression="&quot;Digite o primeiro n&#250;mero:&quot;" newline="True"/>
+                <input variable="num1"/>
+                <output expression="&quot;Digite o segundo n&#250;mero:&quot;" newline="True"/>
+                <input variable="num2"/>
+            </while>
+            <assign variable="resultado" expression="&quot;&quot;"/>
+            <for variable="i" start="num1 + 1" end="num2 - 1" direction="inc" step="1">
+                <if expression="i % 2 == 0">
+                    <then>
+                        <assign variable="resultado" expression="resultado &amp; i &amp; &quot; &#8211; PAR ///   &quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="resultado" expression="resultado &amp; i &amp; &quot; &#8211; &#205;MPAR ///   &quot;"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="resultado" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
