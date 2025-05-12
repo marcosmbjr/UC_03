@@ -4,9 +4,9 @@
         <attribute name="name" value="vendedor_comissao"/>
         <attribute name="authors" value=""/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-05-12 01:58:54 "/>
+        <attribute name="saved" value="2025-05-12 03:16:59 "/>
         <attribute name="created" value="bWFyY29zLm1ianVuaW9yMTtTQU4wNjc0Mzg5VzExLTE7MjAyNS0wNS0xMjsiMDE6NTU6MjAgIjszNjcz"/>
-        <attribute name="edited" value="bWFyY29zLm1ianVuaW9yMTtTQU4wNjc0Mzg5VzExLTE7MjAyNS0wNS0xMjsiMDE6NTg6NTQgIjsxOzM3OTE="/>
+        <attribute name="edited" value="bWFyY29zLm1ianVuaW9yMTtTQU4wNjc0Mzg5VzExLTE7MjAyNS0wNS0xMjsiMDM6MTY6NTkgIjszOzM3OTQ="/>
     </attributes>
     <function name="Main" type="None" variable="nome,salario,vendas,comissao,pagamento">
         <parameters/>
@@ -22,12 +22,12 @@
             <input variable="salario"/>
             <output expression="&quot;Digite o valor em vendas desse vendedor&quot;" newline="True"/>
             <input variable="vendas"/>
-            <if expression="vendas &gt; 5000">
+            <if expression="vendas &gt;= 3000">
                 <then>
                     <assign variable="comissao" expression="vendas * 0.15"/>
                 </then>
                 <else>
-                    <if expression="vendas &gt;= 1500 and vendas &lt;= 3000">
+                    <if expression="vendas &gt;= 1500">
                         <then>
                             <assign variable="comissao" expression="vendas * 0.10"/>
                         </then>
