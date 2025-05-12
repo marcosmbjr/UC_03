@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="conversao_temperatura"/>
+        <attribute name="authors" value=""/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-12 02:48:54 "/>
+        <attribute name="created" value="bWFyY29zLm1ianVuaW9yMTtTQU4wNjc0Mzg5VzExLTE7MjAyNS0wNS0xMjsiMDI6NDA6NDAgIjszNjcw"/>
+        <attribute name="edited" value="bWFyY29zLm1ianVuaW9yMTtTQU4wNjc0Mzg5VzExLTE7MjAyNS0wNS0xMjsiMDI6NDg6NTQgIjsxOzM3OTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="opcao" type="String" array="False" size=""/>
+            <declare name="entrada" type="String" array="False" size=""/>
+            <declare name="temperatura" type="Real" array="False" size=""/>
+            <declare name="resultado" type="Real" array="False" size=""/>
+            <output expression="&quot;Escolha a convers&#227;o:\n1 - Celsius para Fahrenheit\n2 - Fahrenheit para Celsius&quot;" newline="True"/>
+            <input variable="opcao"/>
+            <while expression="opcao != &quot;1&quot; and opcao != &quot;2&quot;">
+                <output expression="&quot;Escolha a convers&#227;o:\n1 - Celsius para Fahrenheit\n2 - Fahrenheit para Celsius&quot;" newline="True"/>
+                <input variable="opcao"/>
+            </while>
+            <output expression="&quot;Digite a temperatura:&quot;" newline="True"/>
+            <input variable="temperatura"/>
+            <if expression="opcao == &quot;1&quot;">
+                <then>
+                    <assign variable="resultado" expression="(temperatura * 1.8) + 32"/>
+                    <output expression="temperatura &amp; &quot;&#176;C equivalem a &quot; &amp; resultado &amp; &quot;&#176;F&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="resultado" expression="(temperatura - 32) * 5/9"/>
+                    <output expression="temperatura &amp; &quot;&#176;F equivalem a &quot; &amp; resultado &amp; &quot;&#176;C&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
