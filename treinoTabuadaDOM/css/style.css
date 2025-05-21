@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: rgb(56, 54, 54);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@ body {
 .container {
   width: 90%;
   max-width: 600px;
-  background-color: white;
+  background-color: rgb(155, 152, 152);
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #cccccc;
@@ -20,19 +20,20 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
-.form {
+form {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.form input {
+form input {
   width: 80%;
   padding: 10px;
   margin: 5px 0;
   font-size: 16px;
 }
 
-.form button {
+form button {
+  border-radius: 10px;
   padding: 10px 20px;
   font-size: 16px;
   background-color: #000000;
@@ -42,8 +43,8 @@ h1, h2 {
   margin-top: 10px;
 }
 
-.form button:hover {
-  background-color: #004d99;
+form button:hover {
+  background-color: #76797c;
 }
 
 table {

@@ -9,6 +9,7 @@ function gerarTabuada() {
   if (numero === "" || inicio === "" || fim === "") {
     alert("Por favor, preencha todos os campos.");
     return;
+
   }
 
  
@@ -16,6 +17,10 @@ function gerarTabuada() {
   inicio = parseInt(inicio);
   fim = parseInt(fim);
 
+    if (fim < inicio) {
+    alert("O valor final deve ser maior que o valor inicial.");
+    return;
+  }
   
   for (let i = inicio; i <= fim; i++) {
     let linha = "<tr>";
@@ -27,4 +32,12 @@ function gerarTabuada() {
     linha += "</tr>";
     resultado.innerHTML += linha;
   }
+  limparCampos();
+  
 }
+
+function limparCampos() {
+  document.getElementById("tabuada").value = "";
+  document.getElementById("inicio").value = "";
+  document.getElementById("fim").value = "";
+  }
